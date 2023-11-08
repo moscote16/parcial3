@@ -19,6 +19,7 @@
         </div>
         <div class="row d-flex flex-wrap">
                 <div class="col-sm-4 mb-6 gap-3">
+                    <h2 class="Funciones" >OTRAS FUNCIONES</h2>
                     <div class="button d-flex justify-content: space-around">
                         <router-link to="/Cartelera">
                             <button class="me-8 mb-6">
@@ -74,11 +75,16 @@ router-link {
     color: white;
     justify-content: center;
     position: relative;
-    background: linear-gradient(to right, rgb(20, 30, 48), rgb(36, 59, 85));
+    /* background: linear-gradient(to right, rgb(20, 30, 48), rgb(36, 59, 85)); */
+    background: linear-gradient(to right, #85C1E9, #3498DB);
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
 
+.Funciones{
+    color: #3498DB;
+    align-items: center;
+}
 .tarjeta {
     width: 100%;
     height: 100%;
