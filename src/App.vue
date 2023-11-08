@@ -6,6 +6,14 @@
 </template>
 
 <style lang="scss">
+
+body {
+  background-image: url('https://img.freepik.com/fotos-premium/concepto-accesorios-cine-sobre-fondo-madera-oscura_185193-61023.jpg?w=360');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
