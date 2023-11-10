@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row d-flex justify-content-center">
             <div class="col-sm-9 col-md-8">
-                <h1>Lista De Genero</h1>
+                <h1 class="Funciones" >Lista De Genero</h1>
             </div>
         </div>
         <div class="row d-flex justify-content-center flex-wrap">
@@ -18,22 +18,27 @@
             </div>
         </div>
         <div class="row d-flex flex-wrap">
-                <div class="col-sm-4 mb-6 gap-3">
-                    <h2 class="Funciones" >OTRAS FUNCIONES</h2>
+            <div class="col-sm-12"><h2 class="Funciones" >OTRAS FUNCIONES</h2></div>
+                <div class="col-sm-4 gap-3">
                     <div class="button d-flex justify-content: space-around">
                         <router-link to="/Cartelera">
-                            <button class="me-8 mb-6">
+                            <button class="mb-4">
                                 <span class="text">Cartelera</span>
                             </button>
                         </router-link>
-                        <router-link to="/">
-                            <button>
+                        <router-link to="/Bests">
+                            <button class="mb-6">
                                 <span class="text">Mejor Calificadas</span>
                             </button>
                         </router-link>
                         <router-link to="/Populares">        
-                            <button class="me-8 mb-6">
+                            <button class="mb-6">
                                 <span class="text">Populares</span>
+                            </button>
+                        </router-link>
+                        <router-link to="/Estrenos">        
+                            <button class="mb-6">
+                                <span class="text">Estrenos</span>
                             </button>
                         </router-link>
                     </div>
@@ -43,8 +48,10 @@
 </template>
 
 <script>
-
+import Vue from 'vue'
+import YouTube from 'vue3-youtube'
 import PelicService from '@/services/PelicService'
+
 
 export default {
     name: 'GeneroView',
@@ -82,7 +89,7 @@ router-link {
 }
 
 .Funciones{
-    color: #3498DB;
+    color: #5B42F3;
     align-items: center;
 }
 .tarjeta {
@@ -99,7 +106,7 @@ router-link {
 }
 
 .time-text {
-    font-size: 50px;
+    font-size: 38px;
     margin-top: 0px;
     margin-left: 15px;
     font-weight: 600;
@@ -134,8 +141,8 @@ button {
     font-size: 18px;
     justify-content: center;
     line-height: 1em;
-    max-width: 100%;
-    min-width: 340px;
+    max-width: 90%;
+    min-width: 320px;
     padding: 3px;
     text-decoration: none;
     user-select: none;
@@ -155,7 +162,7 @@ button:hover {
 
 button span {
     background-color: rgb(5, 6, 45);
-    padding: 16px 24px;
+    padding: 16px 20px;
     border-radius: 6px;
     width: 100%;
     height: 100%;

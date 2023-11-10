@@ -8,9 +8,10 @@
 <style lang="scss">
 
 body {
-  background-image: url('https://img.freepik.com/fotos-premium/concepto-accesorios-cine-sobre-fondo-madera-oscura_185193-61023.jpg?w=360');
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: antiquewhite;
+  // background-image: url('https://img.freepik.com/fotos-premium/concepto-accesorios-cine-sobre-fondo-madera-oscura_185193-61023.jpg?w=360');
+  // background-repeat: no-repeat;
+  // background-size: cover;
 
 }
 

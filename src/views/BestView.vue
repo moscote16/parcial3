@@ -2,35 +2,32 @@
   <div class="container">
     <div class="row d-flex justify-content-center">
       <div class="col-sm-8 mb-5">
-        <h1 class="text-success text-center Funciones">Cartelera</h1>
+        <h1 class="text-success text-center Funciones">Mejores Calificadas</h1>
       </div>
     </div>
     <div class="row d-flex justify-content-center">
       <div class="col d-flex flex-wrap">
         <div
           class="d-flex col mb-5 mx-6 justify-content-around"
-          v-for="Cartelera in Carteleras"
-          :key="Cartelera.id"
+          v-for="Best in Bests"
+          :key="Best.id"
         >
-          <router-link :to="{ path: '/MovieDetail/' + Cartelera.id }">
+          <router-link :to="{ path: '/MovieDetail/' + Best.id }">
             <div class="card">
               <div class="card-image">
                 <img
                   class="img"
-                  :src="
-                    `https://image.tmdb.org/t/p/w500` + Cartelera.poster_path
-                  "
+                  :src="`https://image.tmdb.org/t/p/w500` + Best.poster_path"
                   alt=""
                 />
                 <!-- {{ Cartelera.poster_path }} -->
               </div>
               <div class="text0">
-                <div class="category">{{ Cartelera.title }}</div>
+                <div class="category">{{ Best.title }}</div>
                 <div class="heading">
-                  <strong>Popularidad: {{ Cartelera.popularity }}</strong>
+                  <strong>Popularidad: {{ Best.popularity }}</strong>
                   <div class="author">
-                    Fecha:
-                    <span class="name">{{ Cartelera.release_date }}</span>
+                    Fecha: <span class="name">{{ Best.release_date }}</span>
                   </div>
                 </div>
               </div>
@@ -46,17 +43,17 @@
 import PelicService from '@/services/PelicService'
 
 export default {
-    name: 'CarteleraView',
+    name: 'BestView',
     data() {
         return {
-            Carteleras: []
+            Bests: []
         }
     },
     async created() {
-      const Generoid = this.$route.params.id;
+        const Generoid = this.$route.params.id;
       this.Peliculas = await PelicService.getGenPeliculas(Generoid)
-      this.Carteleras = await PelicService.getCartelera()
-      console.log(this.Carteleras)
+        this.Bests = await PelicService.getBestCalificadas()
+        console.log(this.Bests)
     }
 }
 </script>
